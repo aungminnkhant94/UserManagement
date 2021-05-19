@@ -1,0 +1,16 @@
+{
+    "name": "aungminnnkhant/user-management",
+    "authors": [
+        {
+            "name": "Aung Minn Khant",
+            "email": "aungminnkhant94@gmail.com"
+        }
+    ],
+    "require": {} ,
+    "autoload": {
+        "psr-4" : {
+            "Libs\\": "_classes/Libs/",
+            "Helpers\\": "_classes/Helpers/"
+        }
+    }
+}
