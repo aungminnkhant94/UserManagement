@@ -7,12 +7,17 @@ use PDOException;
 
 class MySQL
 {
+    private $dbhost;
+    private $dbuser;
+    private $dbname;
+    private $dbpass;
+    private $db;
+
     public function __construct(
-        private $dbhost = "localhost",
-        private $dbuser = "root",
-        private $dbname = "PHP-UserManagement",
-        private $dbpass = "Aungminnkhant_941",
-        private $db,
+        $dbhost = "localhost",
+        $dbuser = "root",
+        $dbname = "PHP-UserManagement",
+        $dbpass = "Aungminnkhant_941",
     ) {
         $this->dbhost = $dbhost;
         $this->dbuser = $dbuser;
@@ -35,7 +40,7 @@ class MySQL
             );
             return $this->db;
         } catch (PDOException $e) {
-            return $e->getMessage();
+            return $e->getMessage() ();
         }
     }
 }
