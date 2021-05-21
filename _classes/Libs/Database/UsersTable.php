@@ -62,4 +62,14 @@ class UsersTable
 
         return $row ?? false;
     }
+
+    public function updatePhoto($id, $name)
+    {
+        $statement = $this->db->prepare("
+            UPDATE users SET photo=:name WHERE id=:id"
+        );
+        $statement->execute([ ':name' => $name, ':id' => $id]);
+
+        return $statement->rowCount();
+    }
 }
